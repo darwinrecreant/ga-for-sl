@@ -12,9 +12,9 @@
     `;
     
     container.addEventListener('click', (e) => {
-      if (e.target.matches([data-href])) {
+      if (e.target.matches('[data-href]')) {
         let page = e.target.getAttribute('data-href');
-        let content = $('.content);
+        let content = $('.content');
         switch (page) {
           case 'manual':
             content.innerHTML = manual;

@@ -17,6 +17,10 @@ h1 {
   font-style: italic;
 }
 
+[data-href] {
+  cursor: pointer;
+}
+
 .tabs {
   display: flex;
   padding: 0;
@@ -29,14 +33,23 @@ h1 {
   margin: 0;
   border: 1px solid #ddd;
   border-left: 0;
+  border-bottom: 1px solid white;
   backgound-color: #eee;
+  display: relative;
+  bottom: -1px;
 }
 
 .tabs li.active {
   background-color: white;
+  z-index: 2;
 }
 
 .tabs li:first-child {
-  margin-left: 40px;
+  margin-left: 20px;
   border-left: 1px solid #ddd;
+}
+
+.contents {
+  display: relative;
+  z-index: 1;
 }

@@ -40,21 +40,25 @@ or how engaging is your in-world store, you had to either make your own analytic
 implementation, which is very costly, or rely on sub-par analytics services with limited feaures, or simply 
 had to rely on anectdotal feedback from customers.</p>
 
-<p>Google Anlytics is the defacto standard analytics service for the web. It has an endless list of features, 
+<p>Google Analytics is the defacto standard analytics service for the web. It has an endless list of features, 
 is very flexible, and did I mention free!. <span class="product-name">Google Anlytics for Second Life</span> is a 
 Second Life connector between Google Analytics and in-world objects. By opening a google analytics account and 
-using this product it is possible to track analytics for you products, parcels, vendors, games, and just about 
+using this product it is possible to track analytics for you sales, products, parcels, vendors, games, and just about 
 anything you can imagine that is scripted.</p>
 
     <h3>Who is this for</h3>
+
 <p>This product is geared towards sim/land owners and merchants. It provides an api for scripters to implement 
-analytics in the product they are working on. There are even several general usecase sample scripts that will
-work by simply placing into your land or vendor.</p>
+analytics in the product they are working on. There are even several general usecase sample scripts provided that will
+work by simply placing into your land or vendor as is.</p>
+
     <h3>What is possible with Google Analytics</h3>
     <h3>GA for Sims and parcels</h3>
     <h3>GA for HUDs and Dialogs</h3>
     <h3>GA for SL Marketplace</h3>
+
     <h3>Privacy</h3>
+
 <p><span class="product-name">Google Analytics for Second Life</span> is a limited version of the web product, 
 and therefore does not use cookies, has no access to visitor ip's, or any of the other features of the SL viewer. 
 Out of the box, this product cannot track user data, other than simple counters for interactions with in the sim. 

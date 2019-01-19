@@ -12,6 +12,11 @@ html, body {
   border-radius: 10px;
 }
 
+h1 {
+  margin-top: 0;
+  font-style: italic;
+}
+
 .tabs {
   display: flex;
   padding: 0;

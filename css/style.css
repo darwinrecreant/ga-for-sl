@@ -34,8 +34,8 @@ h1 {
   border: 1px solid #ddd;
   border-left: 0;
   border-bottom: 1px solid white;
-  backgound-color: #eee;
-  display: relative;
+  background-color: #eee;
+  position: relative;
   bottom: -1px;
 }
 
@@ -50,6 +50,6 @@ h1 {
 }
 
 .contents {
-  display: relative;
+  position: relative;
   z-index: 1;
 }

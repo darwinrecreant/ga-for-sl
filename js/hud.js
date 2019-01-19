@@ -39,5 +39,8 @@
     <h3>GA for HUDs and Dialogs</h3>
     <h3>GA for SL Marketplace</h3>
     `;
+    
+    $('.content').innerHTML = manual;
+    $('.tabs [data-href=manual]').classList.add('active');
   });
 })((q) => document.querySelector(q))

@@ -3,7 +3,7 @@
     let container = $('#container');
     container.innerHTML = `
       <h1>Google Analytics for Second Life</h1>
-      <ul>
+      <ul class="tabs">
         <li tabindex="0" data-href="manual">Manual</li>
         <li tabindex="0" data-href="examples">Script Examples</li>
         <li tabindex="0" data-href="affiliate">Affiliate Script</li>

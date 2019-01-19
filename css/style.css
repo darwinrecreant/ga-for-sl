@@ -33,7 +33,7 @@ h1 {
   margin: 0;
   border: 1px solid #ddd;
   border-left: 0;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid #ddd;
   background-color: #eee;
   position: relative;
   bottom: -1px;

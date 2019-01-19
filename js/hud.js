@@ -1,6 +1,6 @@
 (($) => {
   document.addEventListener('DOMContentLoaded', () => {
-    let container = $('#container);
+    let container = $('#container');
     container.innerHTML = `
       <h1>Google Analytics for Second Life</h1>
       <ul>

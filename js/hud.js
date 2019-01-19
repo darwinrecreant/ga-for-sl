@@ -14,6 +14,8 @@
     container.addEventListener('click', (e) => {
       if (e.target.matches('[data-href]')) {
         let page = e.target.getAttribute('data-href');
+        $('.tabs .active').classList.remove('active');
+        $('.tabs [data-href=' + page + ']').classList.add('active');
         let content = $('.content');
         switch (page) {
           case 'manual':
@@ -24,6 +26,7 @@
             break;
           case 'affiliate':
             content.innerHTML = '';
+            break;
         }
       }
     });

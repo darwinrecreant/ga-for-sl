@@ -55,12 +55,12 @@ work by simply placing into your land or vendor.</p>
     <h3>GA for HUDs and Dialogs</h3>
     <h3>GA for SL Marketplace</h3>
     <h3>Privacy</h3>
-Google Analytics for Second Life is a limited version of the web product, and therefore does not use cookies,
-has no access to visitor ip's, or any of the other features of the SL viewer. Out of the box, this product cannot
-track user data, other than simple counters for interactions with in the sim. Storing user identifiying data, such
-as name or uuid, is up to the scripters of products, but is against Google Analytics' policies, as well as some 
-European laws. The makers of Google's Analytics for Second Life are not responsible for the missuse of Google and Second 
-Life products.
+<p><span class="product-name">Google Analytics for Second Life</span> is a limited version of the web product, 
+and therefore does not use cookies, has no access to visitor ip's, or any of the other features of the SL viewer. 
+Out of the box, this product cannot track user data, other than simple counters for interactions with in the sim. 
+Storing user identifiying data, such as name or uuid, is up to the scripters of products, but is against Google 
+Analytics' policies, as well as some European laws. The makers of <span class="product-name">Google Analytics 
+for Second Life</p> are not responsible for the misuse of Google and Second Life products.</p>
     `;
     
     $('.content').innerHTML = manual;

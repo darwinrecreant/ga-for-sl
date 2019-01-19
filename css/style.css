@@ -3,3 +3,35 @@ html, body {
   margin: 0;
   font-family: arial;
 }
+
+#container {
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.tabs {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabs li {
+  padding: 10px 20px;
+  margin: 0;
+  border: 1px solid #ddd;
+  border-left: 0;
+  backgound-color: #eee;
+}
+
+.tabs li.active {
+  background-color: white;
+}
+
+.tabs li:first-child {
+  margin-left: 40px;
+  border-left: 1px solid #ddd;
+}

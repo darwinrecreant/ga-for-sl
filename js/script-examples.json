@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Track purchase - single item vendor",
+    "gaslVersion": "1.0",
+    "script": "single-item-vendor.lsl"
+  },
+  {
+    "name": "Track touch",
+    "gaslVersion": "1.0",
+    "script": "track-touch.lsl"
+  },
+  {
+    "name": "Track visit - phantom collision (low lag)",
+    "gaslVersion": "1.0",
+    "script": "phantom-collision.lsl"
+  },
+  {
+    "name": "Track visit - parcel timer",
+    "gaslVersion": "1.0",
+    "script": "parcel-agents.lsl"
+  }
+]

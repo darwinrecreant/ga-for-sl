@@ -1,15 +1,16 @@
 html, body {
   padding: 0;
   margin: 0;
-  font-family: arial;
+  font-family: Raleway, sans-serif;
 }
 
 #container {
   background-color: white;
-  margin: 20px;
+  margin: 20px auto;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 10px;
+  max-width: 740px;
 }
 
 h1 {
@@ -19,6 +20,35 @@ h1 {
 
 [data-href] {
   cursor: pointer;
+}
+
+.select select {
+  border: 1px solid #aaa;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.btn {
+  border: 1px solid #aaa;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color:white;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.product-name {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.code {
+  display: inline-block;
+  padding: 3px 5px;
+  background-color: #ddd;
+  border-radius: 3px;
 }
 
 .tabs {
@@ -50,7 +80,23 @@ h1 {
   border-left: 1px solid #ddd;
 }
 
-.contents {
+.content {
   position: relative;
   z-index: 1;
+}
+
+.content .inner {
+  display: none;
+}
+
+.content.about .about {
+  display:block;
+}
+
+.content.manual .manual {
+  display:block;
+}
+
+.content.examples .examples {
+  display:block;
 }

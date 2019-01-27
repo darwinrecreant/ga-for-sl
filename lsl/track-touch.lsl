@@ -1,5 +1,5 @@
 /**************** Track visit - parcel timer ****************
- * Tracks whem a button / object is touched. Assumes category
+ * Tracks when a button / object is touched. Assumes category
  * is current parcel's name, action is "Touch", label is
  * the object's name, and button name is the name of the link 
  * prim that was touched.

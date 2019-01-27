@@ -16,16 +16,16 @@
     
     <h1>Google Analytics for Second Life</h1>
     <ul class="tabs">
-      <li tabindex="0" data-href="about">About</li>
-      <li tabindex="0" data-href="manual">Manual</li>
-      <li tabindex="0" data-href="examples">Script Examples</li>
+      <li data-href="manual">Manual</li>
+      <li data-href="about">About</li>
+      <li data-href="examples">Script Examples</li>
     </ul>
     <div class="content">
       <div class="inner about">
         <h3>About</h3>
 
         <p>One of the difficulties professionals in Second Life have to deal with is the lack of feedback for their 
-        products. Currently, if you wanted to analyze how your product is used, what are the most liked/used featured, 
+        products. Currently, if you wanted to analyze how your product is used, what are the most liked/used features, 
         or how engaging is your in-world store, you had to either make your own analytics storage and processing 
         implementation, which is very costly, or rely on sub-par analytics services with limited feaures, or simply 
         had to rely on anectdotal feedback from customers.</p>
@@ -39,8 +39,9 @@
         <h3>Who is this for</h3>
         
         <p>This product is geared towards sim/land owners and merchants. It provides an api for scripters to implement 
-        analytics in the product they are working on. There are even several general usecase sample scripts provided that will
-        work by simply placing into your land or vendor as is.</p>
+        analytics in the product they are working on. There are even several general usecase sample scripts in the 
+        <span class="code">Script Examples</span> tab above that will work by simply placing into your land or vendor as 
+        is.</p>
         
         <h3>What is possible with Google Analytics</h3>
 
@@ -52,27 +53,95 @@
           <li>Track revenue per store/vendor/product</li>
           <li>Set conversion goals and alerts</li>
           <li>Track promotions and their hit rates to your parcel</li>
-          <li>Frequency and duration of use of your products</li>
-          <li>Track the most pressed buttons on a HUD, or most used screens</li>
-          <li>Track marketplace purchases</li>
+          <!--<li>Frequency and duration of use of your products</li>-->
+          <!--<li>The most pressed buttons on a HUD, or most used screens</li>-->
+          <!--<li>Marketplace purchases</li>-->
         </ul>
     
         <h3>Privacy</h3>
         
         <p><span class="product-name">Google Analytics for Second Life</span> is a limited version of the web product, 
         and therefore does not use cookies, has no access to visitor ip's, or any of the other features of the SL viewer. 
-        Out of the box, this product cannot track user data, other than simple counters for interactions with in the sim. 
-        Storing user identifiying data, such as name or uuid, is up to the scripters of products, but is against Google 
-        Analytics' policies, as well as some European laws. The makers of <span class="product-name">Google Analytics 
+        Out of the box, this product cannot track user data, other than simple counters for interactions within the sim. 
+        Storing user identifiying data, such as name or uuid, is up to the scripter's descretion, but is against 
+        Google Analytics' policies, as well as some European laws. The makers of <span class="product-name">Google Analytics 
         for Second Life</span> are not responsible for the misuse of Google and Second Life products.</p>
             
       </div>
 
       <div class="inner manual">
-          <h3>GA for Sims</h3>
-          <h3>GA for Parcels</h3>
-          <h3>GA for HUDs</h3>
-          <h3>GA for SL Marketplace</h3>
+          <h2>Setting up Google Analytics Account</h2>
+
+          <p>To use any of the products you must use the Google Analytics service, which is free, and requires using a Gmail
+          or Google Apps account.</p>
+
+          <p>Signing up / login can be done here:<br/>
+            <a href="https://www.google.com/analytics/web/provision" target="_blank">https://www.google.com/analytics/web/provision<a/>
+          </p>
+
+          <p>Getting started with Google Analytics:<br/>
+            <a href="https://support.google.com/analytics/" target="_blank">https://support.google.com/analytics/</a>
+          </p>
+
+          <p>If you plan on tracking commerce data, you need to enable the Enhanced Ecommerce feature:<br/>
+            <a href="https://support.google.com/analytics/answer/6032539" target="_blank">https://support.google.com/analytics/answer/6032539</a>
+          </p>
+
+          <h2>GA for Sims / Parcels</h2>
+          
+          <p><span class="product-name">Google Analytics for Sims</span> allows Sim owners to track visitors all across 
+            their sim, for the duration of their stay. <span class="product-name">Google Analytics for Parcels</span> is 
+            identical to the sim product in every way, with the exception that the sim version can handle up to 280 events
+            per minute (your milage may vary based on sim performance), whereas the parcel version can handle up to 20
+            events per minute.</p>
+
+          <p>The package comes with the follownig contents:</p>
+          <ul>
+            <li><strong>GA Server (object)</strong> - The server object that handles all the tracking within the sim.</li>
+            <li><strong>GA Relay (script)</strong> - The <span class="code">GA Server</span> communicates with 
+              <span class="code">GA Relays</span> that act as connectors between local scripts inside objects and the 
+              server.</li>
+          </ul>
+
+          <p>The procedure to setup analytics tracking within the sim is as follows:</p>
+          <ol>
+            <li>Rez the <span class="code">GA Server</span> somewhere descrete within the sim.</li>
+            <li>Select the <span class="code">Create New</span> option after clicking the server.</li>
+            <li>Supply the <a href="https://support.google.com/analytics/answer/1008080?hl=en" target="_blank">UA code 
+              provided by google analytics</a>, and give a label to this server. You can also decide if 
+              to set tracker access to <span class="code">Group</span> or <span class="code">Owner</span> 
+              (this applies to sending hit events, only owner has access to server menus). Setting to 
+              group will let your tenants or other team members use the relays to send hit events to the 
+              server, which will be useful if you are hosting an event, for example.
+            </li>
+            <li>
+              Insert the <span class="code">GA Relay</span> script in the scripted objects you would 
+              like to track, and link this relay to your <span class="code">GA Server</span> by 
+              following the dialog popup instructions. A good place to start is with the greeter on your
+              land, if you have one, to start tracking visits. There are some sample scripts you can use 
+              for this in the <span class="code">Script Examples</span> tab above.
+            </li>
+            <li>
+              If you or a colleague are up to the task, you can start tracking certain actions and events
+              by using the open source scripts available in the <span class="code">Script Examples</span> 
+              tab above, and script your own solutions for google analytics.
+            </li>
+          </ol>
+
+          <p><strong>Important note:</strong> Once the server is rezzed and initialized, it would be a good
+          idea to take a backup. If the server is deleted after you set up your relays, all relays will no 
+          longer work, and all the the relays will have to be set again one by one manually if you dont have 
+          a backup.</p>
+
+          <p> When rezzing a backup, all relays will be updated automatically, and the previous 
+            <span class="code">GA Server</span> will reset.</p>
+          
+          <p>When rezzing a fresh <span class="code">GA Server</span>, such as during an upgrade with a newer
+            version, you can choose the <span class="code">Replace</span> option, to transfer the old server 
+            to this fresh one. All relays will link up automatically after you are done.</p>
+          
+          <!--<h3>GA for HUDs</h3>-->
+          <!--<h3>GA for SL Marketplace</h3>-->
       </div>
 
       <div class="inner examples">

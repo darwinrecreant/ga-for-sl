@@ -5,7 +5,8 @@
  * every hour when the avatar is no longer in the sim.
  *
  * This can be placed at the landing point of the parcel, or
- * at the entrance to every room.
+ * at the entrance to every room. The object's name is used
+ * as the label of the hit.
  *
  * This can be used to track promotions/ads, by giving a
  * different landing point per ad, and placing this collider
@@ -43,19 +44,20 @@ default
     {
         key agent = llDetectedKey(0);
         if(!~llListFindList(visitors, [agent])) {
+            visitors += [agent];
             list details = llGetParcelDetails(llGetPos(), [PARCEL_DETAILS_NAME]);
             string parcelName = llList2String(details, 0);
-            ga_visit(llDetectedKey(0), parcelName, "");
-            visitors += [agent];
+            string location = parcelName + "/" + llGetObjectName();
+            ga_visit(agent, location, "");
         }
     }
 
     timer() {
         integer i;
         for (i = llGetListLength(visitors) - 1; i >= 0; i--) {
-        if (llGetAgentSize(llList2Key(visitors, i)) == ZERO_VECTOR) {
-            visitors = llListReplaceList(visitors, [], i, i);
-        }
+            if (llGetAgentSize(llList2Key(visitors, i)) == ZERO_VECTOR) {
+                visitors = llListReplaceList(visitors, [], i, i);
+            }
         }
     }
 }

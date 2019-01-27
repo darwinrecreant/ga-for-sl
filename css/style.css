@@ -46,7 +46,7 @@ h1 {
 
 .code {
   display: inline-block;
-  padding: 3px 5px;
+  padding: 0px 5px;
   background-color: #ddd;
   border-radius: 3px;
 }

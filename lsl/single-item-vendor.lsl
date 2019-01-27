@@ -1,7 +1,7 @@
 /************ Track purchase - single item vendor ************
  * Tracks purchases in a vendor that sells a single item. This
- * must be a scripted vendor, ie not using the 'For sale' 
- * option on the object. 
+ * must be a scripted vendor, ie not using the 'For sale' option 
+ * of the Build Tool Box of the object. 
  *
  * This can be placed in any vendor that sells a single product
  * with a script.
@@ -9,7 +9,7 @@
  * This script assumes the affiliate (or store) is the parcel's
  * name, the product name is the vendor object's name, and 
  * product category is the vendor object's description. Feel
- * tfree o change the values to your preference.
+ * free to change the values to your preference.
  ************************************************************/
 
 integer relayIncomingLinkNum = 282873400;
@@ -20,8 +20,8 @@ send(key agent, string action, list params) {
     llMessageLinked(LINK_SET, relayIncomingLinkNum, llList2CSV([agent] + params), (key)action);
 }
 
-ga_purchase(key agent, string locationLabel, string productName, integer quantity, integer price, integer revenue, string affiliate, string transactionId, string optionalSku, string optionalProductCategory, string optionalProductBrand, string optionalProductVariation) {
-    send(agent, "ga-purchase", [locationLabel, transactionId, affiliate, revenue, optionalSku, productName, optionalProductCategory, optionalProductBrand, optionalProductVariation, quantity, price]);
+ga_purchase(key agent, string locationLabel, string productName, integer quantity, integer price, integer revenue, string affiliate, string transactionId, string optionalSku, string optionalProductCategory, string optionalProductBrand, string optionalProductVariation, string referrer) {
+    send(agent, "ga-purchase", [locationLabel, transactionId, affiliate, revenue, optionalSku, productName, optionalProductCategory, optionalProductBrand, optionalProductVariation, quantity, price, referrer]);
 }
  
 default
@@ -47,7 +47,8 @@ default
         string productName = llGetObjectName();
         string productCategory = llGetObjectDesc();
         string variation = "";
+        string referrer = "";
 
-        ga_purchase(customer, location, productName, quantity, price, revenue, storeName, transactionId, sku, productCategory, owner, variation);
+        ga_purchase(customer, location, productName, quantity, price, revenue, storeName, transactionId, sku, productCategory, owner, variation, referrer);
     }
 }

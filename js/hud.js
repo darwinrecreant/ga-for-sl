@@ -2,7 +2,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     let container = $('#container');
     let content = $('.content');
-    let lastPage = 'about';
+    let lastPage = 'manual';
     container.addEventListener('click', (e) => {
       if (e.target.matches('[data-href]')) {
         let page = e.target.getAttribute('data-href');
@@ -13,7 +13,7 @@
         lastPage = page;
       }
     });
-    $('.tabs [data-href=about]').classList.add('active');
+    $('.tabs [data-href= ' + lastPage + ']').classList.add('active');
     content.classList.add(lastPage);
 
     scriptExamplesController(content);

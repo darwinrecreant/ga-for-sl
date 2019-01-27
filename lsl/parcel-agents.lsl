@@ -20,7 +20,7 @@ send(key agent, string action, list params) {
     llMessageLinked(LINK_SET, relayIncomingLinkNum, llList2CSV([agent] + params), (key)action);
 }
 
-ga_visit(key agent, string locationLabel, string referer) {
+ga_visit(key agent, string locationLabel, string referrer) {
     send(agent, "ga-visit", [locationLabel, referrer]);
 }
 

@@ -1,8 +1,8 @@
 /**************** Track visit - parcel timer ****************
  * Tracks when a button / object is touched. Assumes category
- * is current parcel's name, action is "Touch", label is
- * the object's name, and button name is the name of the link 
- * prim that was touched.
+ * is the object's name, action is "Touch", label is the name 
+ * of the link prim that was touched. Feel free to change the 
+ * values to your preference.
  ************************************************************/
 
 integer relayIncomingLinkNum = 282873400;
@@ -20,8 +20,8 @@ default
     touch_start(integer total_number)
     {
         list details = llGetParcelDetails(llGetPos(), [PARCEL_DETAILS_NAME]);
-        string parcelName = llList2String(details, 0);
         string buttonName = llGetLinkName(llDetectedLinkNumber(0));
-        ga_event(llDetectedKey(0), parcelName, "Touch", llGetObjectName(), buttonName);
+        string category = llGetObjectName();
+        ga_event(llDetectedKey(0), category, "Touch", buttonName, "");
     }
 }

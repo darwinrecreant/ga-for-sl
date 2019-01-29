@@ -7,9 +7,10 @@
  * with a script.
  *
  * This script assumes the affiliate (or store) is the parcel's
- * name, the product name is the vendor object's name, and 
- * product category is the vendor object's description. Feel
- * free to change the values to your preference.
+ * name, the product name is the vendor object's name, product 
+ * category is the vendor object's description, and the brand is
+ * the owner's name. Feel free to change the values to your 
+ * preference.
  ************************************************************/
 
 integer relayIncomingLinkNum = 282873400;
@@ -46,9 +47,10 @@ default
         string sku = "";
         string productName = llGetObjectName();
         string productCategory = llGetObjectDesc();
+        string brand = owner;
         string variation = "";
         string referrer = "";
 
-        ga_purchase(customer, location, productName, quantity, price, revenue, storeName, transactionId, sku, productCategory, owner, variation, referrer);
+        ga_purchase(customer, location, productName, quantity, price, revenue, storeName, transactionId, sku, productCategory, brand, variation, referrer);
     }
 }

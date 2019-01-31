@@ -100,3 +100,28 @@ h1 {
 .content.examples .examples {
   display:block;
 }
+
+.products {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  width: 100%;
+}
+
+.products li {
+  width: 30%;
+  margin-bottom: 10px;
+}
+
+.products li img {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.products li a {
+  display: block;
+}

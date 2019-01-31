@@ -21,7 +21,7 @@ default
     {
         list details = llGetParcelDetails(llGetPos(), [PARCEL_DETAILS_NAME]);
         string buttonName = llGetLinkName(llDetectedLinkNumber(0));
-        string category = llGetObjectName();
-        ga_event(llDetectedKey(0), category, "Touch", buttonName, "");
+        string object = llGetObjectName();
+        ga_event(llDetectedKey(0), object, "Touch", buttonName, "");
     }
 }

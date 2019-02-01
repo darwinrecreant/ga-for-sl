@@ -19,11 +19,14 @@
     scriptExamplesController(content);
 
     function scriptExamplesController(content) {
+      hljs.initLineNumbersOnLoad();
       let select = $('.examples .select select');
       let code = $('.examples #code');
       let copy = $('.examples button.copy');
+      let title  = $('.examples #code-title');
       let scripts = [];
       let options = "";
+      let first;
       copy.addEventListener('click', (e) => {
         range = document.createRange();
         range.selectNodeContents(code);
@@ -37,6 +40,7 @@
         }).then((json) => {
           scripts = json;
           scripts.forEach((item, i) => {
+            first = first || item.name;
             options += `<option value="${i}">${item.name}</option>`
           });
 
@@ -46,7 +50,9 @@
           return response.text();
         }).then((lsl) => {
           code.innerHTML = lsl;
+          title.textContent = first;
           hljs.highlightBlock(code);
+          hljs.lineNumbersBlock(code);
         });
 
 
@@ -56,7 +62,9 @@
             return response.text();
           }).then((lsl) => {
             code.innerHTML = lsl;
+            title.textContent = scripts[e.target.value].name;
             hljs.highlightBlock(code);
+            hljs.lineNumbersBlock(code);
           });
       })
     }

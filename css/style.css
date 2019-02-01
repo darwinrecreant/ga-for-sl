@@ -14,6 +14,8 @@ html, body {
 }
 
 h1 {
+  display: flex;
+  justify-content: space-between;
   margin-top: 0;
   font-style: italic;
 }
@@ -114,14 +116,48 @@ h1 {
   width: 30%;
   margin-bottom: 10px;
 }
-
-.products li img {
-  display: block;
+.products li .image {
   margin-bottom: 10px;
-  width: 100%;
-  height: auto;
+  height: 150px;
+  display: flex;
+  align-content: center;
+  align-items: center;
 }
 
 .products li a {
   display: block;
+}
+
+.products li img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  max-height: 150px;
+  margin: auto;
+}
+
+.logo {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 30px;
+  font-style: normal;
+  line-height: 1em;
+  padding: 4px 0 0 8px;
+  font-weight: normal;
+  box-sizing: border-box;
+  font-family: 'Cinzel';
+  white-space: nowrap;
+}
+
+.logo .letter {
+  display: inline-block;
+  position: relative;
+}
+
+.logo .r {
+  top: 10px;
+  right: 18px;
 }

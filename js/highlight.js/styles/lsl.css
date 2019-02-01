@@ -1,0 +1,126 @@
+/*
+
+LSL color scheme from the Second Life viewer
+
+*/
+/* for block of numbers */
+.hljs-ln td.hljs-ln-numbers {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  text-align: center;
+  color: #131313;
+  border-right: 1px solid #131313;
+  vertical-align: top;
+  padding-right: 5px;
+  text-align: right;
+  min-width: 30px;
+
+  /* your custom style here */
+}
+
+/* for block of code */
+.hljs-ln td.hljs-ln-code {
+  padding-left: 10px;
+}
+
+.lsl-script {
+  display: block;
+  background: #2b2b2b;
+  padding: 10px;
+  border: 1px solid #1d1d1d;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.code-title {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #bdbdbd;
+  border-bottom: 1px solid #1d1d1d;
+  left: -10px;
+  top: -10px;
+  position: relative;
+  width: 100%;
+  padding: 5px 10px;
+  text-shadow: black 1px 1px 1px;
+  font-size: 14px;
+  background: linear-gradient(to bottom, #484848 0%,#3c3c3c 50%,#363636 50%,#2d2d2d 100%);
+}
+
+.hljs {
+  overflow-x: auto;
+}
+
+.hljs-ln {
+  background: #ffffff;
+}
+
+.hljs {
+  color: #131313;
+}
+
+.hljs-strong,
+.hljs-emphasis {
+  color: #333;
+}
+
+.hljs-bullet,
+.hljs-quote,
+.hljs-link,
+/* .hljs-number, */
+.hljs-regexp,
+.hljs-literal {
+  color: #029a9a;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-keyword,
+/* .hljs-selector-tag,
+.hljs-section,
+.hljs-attribute, */
+.hljs-name,
+.hljs-variable {
+  color: #cb7832;
+}
+
+.hljs-section {
+  color: #135a89
+}
+
+/* .hljs-params {
+  color: #b9b9b9;
+} */
+
+.hljs-string {
+  color: #ff3817;
+}
+
+.hljs-subst,
+.hljs-type  {
+  color: #d07113;
+}
+
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-symbol,
+/* .hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-template-tag,
+.hljs-template-variable, */
+.hljs-addition {
+  color: #5a1389;
+}
+
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+  color: #178b17;
+}

@@ -12,12 +12,12 @@
  * lag.
  ************************************************************/
 
-integer relayIncomingLinkNum = 282873400;
+integer gaRelayIncomingLinkNum = 282873400;
 
 list visitors;
 
 send(key agent, string action, list params) {
-    llMessageLinked(LINK_SET, relayIncomingLinkNum, llList2CSV([agent] + params), (key)action);
+    llMessageLinked(LINK_SET, gaRelayIncomingLinkNum, llList2CSV([agent] + params), (key)action);
 }
 
 ga_visit(key agent, string locationLabel, string referrer) {

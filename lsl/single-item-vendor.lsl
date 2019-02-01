@@ -13,12 +13,12 @@
  * preference.
  ************************************************************/
 
-integer relayIncomingLinkNum = 282873400;
+integer gaRelayIncomingLinkNum = 282873400;
 
 string owner;
 
 send(key agent, string action, list params) {
-    llMessageLinked(LINK_SET, relayIncomingLinkNum, llList2CSV([agent] + params), (key)action);
+    llMessageLinked(LINK_SET, gaRelayIncomingLinkNum, llList2CSV([agent] + params), (key)action);
 }
 
 ga_purchase(key agent, string locationLabel, string productName, integer quantity, integer price, integer revenue, string affiliate, string transactionId, string optionalSku, string optionalProductCategory, string optionalProductBrand, string optionalProductVariation, string referrer) {

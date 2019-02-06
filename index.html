@@ -19,60 +19,11 @@
     
     <h1>Google Analytics for Second Life <span class="logo"><span class="letter d">D</span><span class="letter r">R</span></span></h1>
     <ul class="tabs">
-      <li tabindex="0" data-href="manual" role="button">Manual</li>
-      <li tabindex="0" data-href="about" role="button">About</li>
-      <li tabindex="0" data-href="examples" role="button">Script Examples</li>
+      <li><a href="index.html">Manual</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="scripts.html">Script Examples</a></li>
     </ul>
     <div class="content">
-      <div class="inner about">
-        <h3>About</h3>
-
-        <p>One of the difficulties professionals in Second Life have to deal with is the lack of feedback for their 
-        products. Currently, if you wanted to analyze how your product is used, what are the most liked/used features, 
-        or how engaging is your in-world store, you had to either make your own analytics storage and processing 
-        implementation, which is very costly, or rely on sub-par analytics services with limited features, or simply 
-        had to rely on anectdotal feedback from customers.</p>
-        
-        <p>Google Analytics is the defacto standard analytics service for the web. It has an endless list of features, 
-        is very flexible, and did I mention free! <span class="product-name">Google Analytics for Second Life</span> is a 
-        Second Life connector between Google Analytics and in-world objects. By opening a google analytics account and 
-        using this product it is possible to track analytics for your sales, products, parcels, vendors, games, and just about 
-        anything you can imagine that is scripted.</p>
-        
-        <h3>Who is this for</h3>
-        
-        <p>This product is geared towards sim/land owners and merchants. It provides an api for scripters to implement 
-        analytics in the product they are working on. There are even several general usecase sample scripts in the 
-        <span class="code">Script Examples</span> tab above that will work by simply placing into your land or vendor as 
-        is.</p>
-        
-        <h3>What is possible with Google Analytics</h3>
-
-        <p>Google Analytics can track things like:</p>
-        <ul>
-          <li>Overall traffic to your sim or parcel with segmentable graphs</li>
-          <li>Duration of visits to to your parcel</li>
-          <li>Repeat visits and bounce rate</li>
-          <li>The most popular flows of visitors from parcel to parcel or room to room</li>
-          <li>Track revenue per store/vendor/product</li>
-          <li>Set conversion goals and alerts</li>
-          <li>Track promotions and their hit rates to your parcel</li>
-          <!--<li>Frequency and duration of use of your products</li>-->
-          <!--<li>The most pressed buttons on a HUD, or most used screens</li>-->
-          <!--<li>Marketplace purchases</li>-->
-        </ul>
-    
-        <h3>Privacy</h3>
-        
-        <p><span class="product-name">Google Analytics for Second Life</span> is a limited version of the web product, 
-        and therefore does not use cookies, has no access to visitor ip's, or any of the other features of the SL viewer. 
-        Out of the box, this product cannot track user data, other than simple counters for interactions within the sim. 
-        Storing user identifiying data, such as name or uuid, is up to the scripter's discretion, but is against 
-        Google Analytics' policies, as well as some European laws. The makers of <span class="product-name">Google Analytics 
-        for Second Life</span> are not responsible for the misuse of Google and Second Life products.</p>
-            
-      </div>
-
       <div class="inner manual">
           <h2>Setting up Google Analytics Account</h2>
 
@@ -160,19 +111,6 @@
             <a href="https://github.com/darwinrecreant/ga-for-sl" class="github" target="_blank" title="Google Analytics for Second Life - LSL Examples"><img alt="Github" src="github.png"/></a>
           </div>
       </div>
-
-      <div class="inner examples">
-        <p>
-          All these scripts require either the <span class="code">GA Relay</span> (for sims and parcels), or 
-          <span class="code">GA HUD</span> (for huds) to be present in the object and initialized, to function.
-        </p>
-        <div class="select"><select></select> <button class="btn copy">Select All</button></div>
-        <div class="lsl-script">
-            <div class="code-title">SCRIPT: <span id="code-title"></span></div>
-            <pre><div id="code"></div></pre>
-          </div>
-      </div>
-    </div>
   </div>
     
 </body>

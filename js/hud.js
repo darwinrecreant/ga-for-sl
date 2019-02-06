@@ -2,19 +2,19 @@
   document.addEventListener('DOMContentLoaded', () => {
     let container = $('#container');
     let content = $('.content');
-    let lastPage = 'manual';
-    container.addEventListener('click', (e) => {
-      if (e.target.matches('[data-href]')) {
-        let page = e.target.getAttribute('data-href');
-        $('.active').classList.remove('active');
-        $('[data-href=' + page + ']').classList.add('active');
-        content.classList.remove(lastPage);
-        content.classList.add(page);
-        lastPage = page;
-      }
-    });
-    $('.tabs [data-href= ' + lastPage + ']').classList.add('active');
-    content.classList.add(lastPage);
+    // let lastPage = 'manual';
+    // container.addEventListener('click', (e) => {
+    //   if (e.target.matches('[data-href]')) {
+    //     let page = e.target.getAttribute('data-href');
+    //     $('.active').classList.remove('active');
+    //     $('[data-href=' + page + ']').classList.add('active');
+    //     content.classList.remove(lastPage);
+    //     content.classList.add(page);
+    //     lastPage = page;
+    //   }
+    // });
+    // $('.tabs [data-href= ' + lastPage + ']').classList.add('active');
+    // content.classList.add(lastPage);
 
     scriptExamplesController(content);
 
